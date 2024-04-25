@@ -1,0 +1,138 @@
+:root {
+    --primary: #D7E2E8;
+    --scondary: #E6BBAA;
+    --title: #0D4442;
+    --text: #286F6F;
+    --orange-dark: #CC794E;
+    --orange-light: #EA9B6A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial';
+    -webkit-text-size-adjust: initial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.br {
+    border: 1px solid red
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--primary);
+    height: 100vh;
+    width: 100%;
+}
+
+.app {
+    height: 100%;
+}
+
+.h2 {
+    color: var(--title);
+    font-size: clamp(2.8125rem, 2.1536rem + 4.2169vw, 5rem);
+    max-width: 100%;
+}
+
+.h4 {
+    color: var(--text);
+    text-align: center;
+    font-size: clamp(2.1875rem, 1.9051rem + 1.8072vw, 3.125rem);
+}
+
+.footer {
+    background-color: var(--title);
+}
+
+.div-text {
+    padding: 0 4rem;
+}
+
+.main {
+    position: relative;
+}
+
+.div-ramal {
+    width: 100%;
+}
+
+/* Style buttons */
+.btn {
+    display: inline-block;
+    text-wrap: nowrap;
+    background-color: var(--orange-light);
+    color: white;
+    cursor: pointer;
+    font-size: clamp(1rem, 0.7364rem + 1.6867vw, 1.875rem);
+}
+  
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: var(--orange-dark);
+}
+
+.subfooter-2 div {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#mylogo {
+    width: 60px
+}
+
+@media screen and (max-width: 900px) {
+    .div-text {
+        z-index: 999;
+        padding: 0 2rem;
+    }
+    .div-ramal {
+        position: absolute;
+        z-index: 100;
+        opacity: .2;
+    }
+    #ramal {
+        max-height: 50vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+    }
+    .footer {
+        z-index: 999;
+    }
+    .subfooter-1, .subfooter-2 {
+        width: 100%;
+    }
+    .h2 {
+        line-height: 45px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .div-text {
+        max-width: 75%;
+    }
+    .div-text h4 {
+        max-width: 50%;
+    }
+    .div-ramal {
+        max-width: 25%;
+    }
+    #ramal {
+        max-height: 70vh;
+        position: absolute;
+        top: -60%;
+    }
+    .subfooter-1, .subfooter-2 {
+        width: 50% !important;
+    }
+}
